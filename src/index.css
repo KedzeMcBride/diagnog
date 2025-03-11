@@ -17,6 +17,7 @@ body {
 }
 
 /* NAVBAR CSS */
+/* Original Nav Styling */
 .nav {
   display: flex;
   align-items: center;
@@ -97,27 +98,60 @@ body {
   background: darkred;
 }
 
-/* MEDIA QUERIES for Responsive Navbar */
+/* Hamburger Menu Base Styles */
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+/* MEDIA QUERIES for Responsive Navbar with Hamburger */
 @media (max-width: 768px) {
+  
   .nav {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
   
-  /* Stack items vertically and center align them */
+  /* Hide the ul (links) by default */
   .nav ul {
+    display: none;
     flex-direction: column;
-    align-items: center;
     width: 100%;
+    background-color: black;
   }
   
   .nav ul li {
     margin: 10px 0;
+    text-align: center;
   }
   
-  /* Adjust the upload button if needed */
+  /* Remove left margin from upload button in mobile view */
   .nav .upload {
-    margin-top: 10px;
+    margin-left: 0;
+  }
+  
+  /* Show the hamburger icon */
+  .hamburger {
+    display: flex;
+  }
+  
+ 
+  .nav-toggle:checked + .hamburger + ul {
+    display: flex;
   }
 }
 
