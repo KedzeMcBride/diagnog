@@ -265,65 +265,89 @@ body {
     margin-left: 0;
   }
 }
-/* Main Service Container with background shadow */
-.service {
-  display: grid;
-  grid-template-columns: repeat(2, auto); 
-  gap: 10px; 
+/* Container to align service boxes and text */
+.service-container {
+  display: flex;
+  justify-content: center; /* Center everything */
+  align-items: center; /* Align items vertically */
+  gap: 40px; /* Space between service boxes and text */
   padding: 20px;
-  background: #fff;
-  border: 2px solid rgba(0, 0, 0, 0.2); 
-  border-radius: 12px; 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
-  justify-content: center; 
 }
 
-/* Style for each service box (the first four divs) */
+/* Service Box Container */
+.service {
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* 2 columns */
+  gap: 10px; /* Reduced gap */
+  padding: 20px;
+  background: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Individual Service Boxes */
 .service > div {
-  width: 300px; /* Reduced width */
+  width: 300px; /* Smaller box width */
   background-color: #f0f0f0;
   text-align: center;
   padding: 10px;
   border-radius: 8px;
+  color: black;
 }
-
-/* Adjust the image size within service boxes */
+.service > div h3 {
+  color: black;
+  font-size: 1em;
+  margin-top: 10px;
+}
+/* Service Box Images */
 .service img {
-  width: 70px; /* Reduced image size */
+  width: 70px;
   height: auto;
   margin-bottom: 10px;
 }
 
-/* h3 styling inside each service box */
-.service > div h3 {
-  color: #000;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1em; /* Slightly smaller text */
-  margin: 0;
+/* Service Text Section (Right Side) */
+.service-text {
+  text-align: left; /* Align text to the left */
+  color: black;
+  max-width: 300px; /* Limit text width */
 }
 
-/* Headings that are not part of the grid of boxes will span the full width of the container */
-.service .our,
-.service .small {
-  grid-column: 1 / -1;
-  text-align: center;
-  margin-top: 20px;
+/* Styling for Our Services Heading */
+.service-text h3 {
+  font-size: 1.5em;
+  margin-bottom: 25px;
+  color: white; 
+  background-color: red; 
+  width: 170px; 
+  text-align: center; 
+  padding: 5px; 
+  border-radius: 25px; 
+  margin-left: 100px;
+}
+
+/* Styling for the Small Description */
+.service-text h4 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 95px;
 }
 
 /* Responsive Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .service-container {
+    flex-direction: column; /* Stack service boxes and text on top of each other */
+    align-items: center;
+  }
+
+  .service-text {
+    text-align: center; /* Center text on smaller screens */
+    max-width: 100%;
+  }
+
   .service {
-    grid-template-columns: 1fr;
-    padding: 15px;
-    gap: 10px;
-  }
-
-  .service > div {
-    width: auto; /* Full width in mobile view */
-    padding: 10px;
-  }
-
-  .service img {
-    width: 60px;
+    grid-template-columns: 1fr; 
   }
 }
