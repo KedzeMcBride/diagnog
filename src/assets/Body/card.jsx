@@ -1,13 +1,14 @@
 const Card = () => {
     return ( 
+        <div className="containery">
         <div className="card">
-            <p className="heading">
-                Popular this month
-            </p>
-                <p>
-                    Top Doctor
-                </p>
-            <p>Kedze McBride Fubin</p>
+        <p><span>
+            </span></p>
+        <p><span>
+            </span></p>
+        <p><span>
+            </span></p>
+        </div>
         </div>
      );
 }
