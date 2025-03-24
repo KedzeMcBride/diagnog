@@ -105,7 +105,7 @@ body {
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: rgb(5, 6, 45);
+  background-color: red;
   transition: width 0.3s ease;
 }
 
@@ -503,15 +503,17 @@ h5 {
       height: 35px;
   }
 }
+/*** CSS for card section ***/
 
-/*** Css for card section***/
-.containery{
+.containery {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh; /* Full viewport height */
-  width: 100vw;  /* Full viewport width */
+  height: 40vh; 
+  width: 100vw;  
+  text-align: center;
 }
+
 .card {
   width: 350px;
   height: 300px;
@@ -529,7 +531,7 @@ h5 {
   border-radius: 2px;
   transition: all 1s;
   background: #212121;
-  border: 1px solid #ff5a91;
+  /**border: 1px solid #ff5a91;**/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -541,16 +543,114 @@ h5 {
 
 .card p span {
   min-width: 14em;
-  padding: .5em;
+  padding: 0.5em;
   text-align: center;
   transform: rotate(-90deg);
-  transition: all .5s;
+  transition: all 0.5s;
   text-transform: uppercase;
-  color: #ff568e;
-  letter-spacing: .1em;
+ color: #ff568e;
+  letter-spacing: 0.1em;
 }
 
 .card p:hover span {
   transform: rotate(0);
 }
-/**Test card styles**/
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+}
+
+h2 em {
+  color: red;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/** Test card styles **/
+.cardy {
+  width: 195px;
+  height: 285px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+  transition: 0.2s ease-in-out;
+}
+
+/* Image (instead of SVG) */
+.img {
+  height: 40%;
+  width: 40%; 
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+/* TextBox - Initially hidden */
+.textBox {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 10; 
+}
+
+
+.textBox .text {
+  font-weight: bold;
+  color: white; /* Ensure text is visible */
+}
+
+.textBox .text.head {
+  font-size: 20px;
+}
+
+.textBox .text.price {
+  font-size: 17px;
+}
+
+.textBox > span {
+  font-size: 12px;
+  color: lightgrey;
+}
+
+
+.cardy:hover > .textBox {
+  opacity: 1;
+}
+
+.cardy:hover > .img {
+  height: 65%;
+  filter: blur(7px);
+  animation: anim 3s infinite;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.cardy:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+.textBox p {
+  color: #ffffff;
+}
