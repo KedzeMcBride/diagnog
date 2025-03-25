@@ -12,7 +12,7 @@ const Card = () => {
 
   <div className="textBox">
     <h2 className="text head">Ringworm</h2>
-    <span>is this disease transmitted by a worm</span>
+    <span>is ringworm transmitted by a worm</span>
     <h2 className="text price">Truth Or Myth</h2>
   </div>
 </div>

@@ -93,8 +93,9 @@ body {
 
 .nav .upload .cloud {
   width: 16px;
-  height: auto;
+  height: 16px;
   margin-right: 5px;
+  margin-top: 10px;
 }
 
 /* Underline effect for links */
@@ -369,7 +370,7 @@ body {
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 10px;
-  margin-left: 95px;
+  margin-left: 10px;
 }
 
 /* Responsive Adjustments */
@@ -509,7 +510,7 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh; 
+  height: 70vh; 
   width: 100vw;  
   text-align: center;
 }
@@ -654,3 +655,51 @@ h2 em {
 .textBox p {
   color: #ffffff;
 }
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .containery {
+    padding: 1rem;
+  }
+
+  .card {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    gap: 2rem;
+  }
+
+  .cardy {
+    width: 80%; /* Make cards smaller on mobile */
+    height: 350px;
+  }
+
+  .cardy img {
+    height: 50%; /* Reduce image height on smaller screens */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Reduce heading size for smaller screens */
+  }
+}
+
+/* Extra small screens (mobile portrait) */
+@media (max-width: 480px) {
+  .cardy {
+    width: 90%;
+    height: 300px;
+  }
+
+  .cardy img {
+    height: 45%;
+  }
+
+  .textBox .text.head {
+    font-size: 18px; /* Adjust text size for smaller screens */
+  }
+
+  .textBox .text.price {
+    font-size: 15px;
+  }
+}
+
+/* css for footer */
