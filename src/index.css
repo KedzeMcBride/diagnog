@@ -664,25 +664,25 @@ h2 em {
   }
 
   .card {
-    flex-direction: column; /* Stack cards vertically on smaller screens */
+    flex-direction: column; 
     gap: 2rem;
   }
 
   .cardy {
-    width: 80%; /* Make cards smaller on mobile */
+    width: 80%; 
     height: 350px;
   }
 
   .cardy img {
-    height: 50%; /* Reduce image height on smaller screens */
+    height: 50%; 
   }
 
   h2 {
-    font-size: 1.5rem; /* Reduce heading size for smaller screens */
+    font-size: 1.5rem;
   }
 }
 
-/* Extra small screens (mobile portrait) */
+
 @media (max-width: 480px) {
   .cardy {
     width: 90%;
@@ -694,7 +694,7 @@ h2 em {
   }
 
   .textBox .text.head {
-    font-size: 18px; /* Adjust text size for smaller screens */
+    font-size: 18px; 
   }
 
   .textBox .text.price {
@@ -703,3 +703,321 @@ h2 em {
 }
 
 /* css for footer */
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  margin-top: 30px;
+}
+/*first footer*/
+.diaglogo {
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+.diaglogo h2 {
+  color: #bbb;
+}
+.logo {
+  height: 40px;
+}
+
+/* Second Footer Section */
+.secondfooter {
+  background-color: #000;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+/* Links and Legal sections */
+.useful-links, .legal {
+  flex: 1;
+}
+.useful-links ul, .legal ul {
+  list-style: none;
+  padding: 0;
+}
+.useful-links li, .legal li {
+  margin-bottom: 8px;
+}
+.useful-links a, .legal a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-size: 15px;
+}
+.useful-links a:hover, .legal a:hover {
+  
+}
+.useful-links a::after, .legal a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: width 0.5s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+.useful-links a:hover::after, .legal a:hover::after {
+  width: 100%;
+}
+
+/* Social div placeholder */
+.social {
+  flex: 1;
+}
+
+/* Third Footer Section */
+.thirdfooter {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+.thirdfooter p {
+  color: #bbb;
+  margin: 5px 0;
+}
+.thirdfooter a {
+  color: white;
+  text-decoration: none;
+}
+.thirdfooter a:hover {
+  color: red;
+  text-decoration: underline;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .secondfooter {
+    flex-direction: column;
+    align-items: center;
+  }
+  .useful-links, .legal, .social {
+    width: 100%;
+    text-align: center;
+  }
+  .diaglogo {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.upload{
+  border-radius: 5px;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 38px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.upload a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem; 
+}
+
+/* css for search and social icons*/
+.search-container {
+  position: relative;
+  width: 290px;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-icon svg {
+  fill: #fff;
+}
+
+.search-icon:hover {
+  background-color: #555;
+}
+
+.search-bar:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 200%;
+  border-radius: 100px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+}
+
+.search-bar:hover + .glow {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.search-bar:focus-within + .glow {
+  transform: translate(-50%, -50%) scale(1.2);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/*icons*/
+.social-login-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
+}
+.social-login-icons svg {
+  width: 40px;
+}
+
+.social-icon-1,
+.social-icon-1-1,
+.social-icon-2,
+.social-icon-2-2,
+.social-icon-3,
+.social-icon-3-3,
+.social-icon-4,
+.social-icon-4-4 {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin: 20px 0 0px 0;
+}
+
+.icon svg {
+  fill: #111;
+}
+
+.socialcontainer {
+  height: 80px;
+  overflow: hidden;
+}
+.social-icon-1 {
+  transition-duration: 0.4s;
+  background-color: rgb(0, 0, 0);
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+}
+.social-icon-1 svg,
+.social-icon-2 svg,
+.social-icon-3 svg,
+.social-icon-4 svg {
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-delay: 0.2s;
+}
+.social-icon-1-1 {
+  transition-duration: 0.4s;
+  background-color: rgb(0, 0, 0, 0);
+}
+.socialcontainer:hover .social-icon-1 {
+  transform: translateY(-70px);
+}
+.socialcontainer:hover .social-icon-1 svg,
+.socialcontainer:hover .social-icon-2 svg,
+.socialcontainer:hover .social-icon-3 svg,
+.socialcontainer:hover .social-icon-4 svg {
+  opacity: 1;
+}
+.social-icon-2 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  background: linear-gradient(
+    72.44deg,
+    #ff7a00 11.92%,
+    #ff0169 51.56%,
+    #d300c5 85.69%
+  );
+}
+.socialcontainer:hover .social-icon-2 {
+  transform: translateY(-70px);
+}
+.social-icon-3 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  background: #316ff6;
+}
+
+.socialcontainer:hover .social-icon-3 {
+  transform: translateY(-70px);
+}
+.social-icon-4 {
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+
+  background: linear-gradient(
+    180deg,
+    rgba(129, 34, 144, 1) 0%,
+    rgba(77, 34, 124, 1) 91%
+  );
+}
+
+.socialcontainer:hover .social-icon-4 {
+  transform: translateY(-70px);
+}
+.follow h3{
+  color:white
+}
