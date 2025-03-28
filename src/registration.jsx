@@ -1,4 +1,4 @@
-import Register from "./assets/Registration and login/Register";
+import Register from "./assets/Registration and login/register";
 const Registration = () => {
     return ( 
         <div>
